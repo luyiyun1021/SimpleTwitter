@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/ve280_p2_Simple_Twitter.dir/main.cpp.o  -o ve280_p2_Simple_Twitter 
