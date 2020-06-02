@@ -1,7 +1,7 @@
 /*
  * This is VE280 Project 2, SU2020.
  * Written by Ziqiao Ma and Zhuoer Zhu.
- * Latest Update: 5/23/2020.
+ * Latest Update: 5/29/2020.
  * All rights reserved.
  */
 
@@ -25,6 +25,9 @@ const unsigned int MAX_FOLLOWING = 20;
 
 // Max number of posts per user
 const unsigned int MAX_POSTS = 50;
+
+// Max number of likes per post
+const unsigned int MAX_LIKES = 20;
 
 // Max number of comments per post
 const unsigned int MAX_COMMENTS = 50;
@@ -85,13 +88,10 @@ struct Tag_t
 // It consists of:
 // * tag_content: the content of the tag
 // * tag_score: the score of the tag used to determine the trend
-// COMMENT: can either use num_relatedPost or score to detect whether it's last tag in the post of this server
-// * num_relatedPost: the number of the post this tag related to
 */
 {
     string tag_content;
     unsigned int tag_score;
-    unsigned int num_relatedPost;
 };
 
 
@@ -103,7 +103,7 @@ struct Post_t
 // It consists of:
 // * comments: An array of comments
 // * like_users: An array of pointers to the users who like this post
-// * tagContents: An array of tag contents of this post
+// * tags: An array of tag contents of this post
 // * owner: A pointer to the post owner
 // * title: the title of the post
 // * text: the text of the post
@@ -112,14 +112,14 @@ struct Post_t
 */
 {
     Comment_t comments[MAX_COMMENTS];
-    User_t *like_users[MAX_USERS];
-    string tagContents[MAX_TAGS];
+    User_t *like_users[MAX_LIKES];
+    string tags[MAX_TAGS];
     User_t *owner;
     string title;
     string text;
     unsigned int num_likes;
     unsigned int num_comments;
-    unsigned int num_tag;
+    unsigned int num_tags;
 };
 
 

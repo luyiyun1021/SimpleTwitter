@@ -1,15 +1,24 @@
 /*
  * This is VE280 Project 2, SU2020.
  * Written by Ziqiao Ma and Zhuoer Zhu.
- * Latest Update: 5/23/2020.
+ * Latest Update: 5/29/2020.
  * All rights reserved.
  */
-
+#include <iostream>
 #include "simulation.h"
+using namespace std;
 
 // TODO: Define your functions in this header file.
 
 /* Helper Functions */
+int searchname(string name, int total,const User_t user[]){
+    //EFFECT:takes the name you want to find in the namelist and returns its position
+    int k;
+    for ( k=0;k<total;k++){
+        if (name==user[k].username){break;}
+    }
+    return k;
+}
 
 // Printing
 
@@ -26,8 +35,8 @@ void printPost(Post_t& post){
     cout << post.title << endl;
     cout << post.text << endl;
     cout << "Tags: ";
-    for(unsigned int i = 0; i<post.num_tag; ++i){
-        cout << post.tagContents[i] << " ";
+    for(unsigned int i = 0; i<post.num_tags; ++i){
+        cout << post.tags[i] << " ";
     }
     cout << "\nLikes: " << post.num_likes << endl;
     if (post.num_comments > 0){

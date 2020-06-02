@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ve280_p2_Simple_Twitter.dir/main.cpp.o"
+  "CMakeFiles/ve280_p2_Simple_Twitter.dir/p2.cpp.o"
+  "CMakeFiles/ve280_p2_Simple_Twitter.dir/simulation.cpp.o"
   "ve280_p2_Simple_Twitter"
   "ve280_p2_Simple_Twitter.pdb"
 )

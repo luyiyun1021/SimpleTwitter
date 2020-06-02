@@ -57,30 +57,45 @@ include CMakeFiles/ve280_p2_Simple_Twitter.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ve280_p2_Simple_Twitter.dir/flags.make
 
-CMakeFiles/ve280_p2_Simple_Twitter.dir/main.cpp.o: CMakeFiles/ve280_p2_Simple_Twitter.dir/flags.make
-CMakeFiles/ve280_p2_Simple_Twitter.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyy/Ve280/project/ve280-p2-Simple-Twitter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ve280_p2_Simple_Twitter.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ve280_p2_Simple_Twitter.dir/main.cpp.o -c /home/lyy/Ve280/project/ve280-p2-Simple-Twitter/main.cpp
+CMakeFiles/ve280_p2_Simple_Twitter.dir/p2.cpp.o: CMakeFiles/ve280_p2_Simple_Twitter.dir/flags.make
+CMakeFiles/ve280_p2_Simple_Twitter.dir/p2.cpp.o: ../p2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyy/Ve280/project/ve280-p2-Simple-Twitter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ve280_p2_Simple_Twitter.dir/p2.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ve280_p2_Simple_Twitter.dir/p2.cpp.o -c /home/lyy/Ve280/project/ve280-p2-Simple-Twitter/p2.cpp
 
-CMakeFiles/ve280_p2_Simple_Twitter.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ve280_p2_Simple_Twitter.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lyy/Ve280/project/ve280-p2-Simple-Twitter/main.cpp > CMakeFiles/ve280_p2_Simple_Twitter.dir/main.cpp.i
+CMakeFiles/ve280_p2_Simple_Twitter.dir/p2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ve280_p2_Simple_Twitter.dir/p2.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lyy/Ve280/project/ve280-p2-Simple-Twitter/p2.cpp > CMakeFiles/ve280_p2_Simple_Twitter.dir/p2.cpp.i
 
-CMakeFiles/ve280_p2_Simple_Twitter.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ve280_p2_Simple_Twitter.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lyy/Ve280/project/ve280-p2-Simple-Twitter/main.cpp -o CMakeFiles/ve280_p2_Simple_Twitter.dir/main.cpp.s
+CMakeFiles/ve280_p2_Simple_Twitter.dir/p2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ve280_p2_Simple_Twitter.dir/p2.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lyy/Ve280/project/ve280-p2-Simple-Twitter/p2.cpp -o CMakeFiles/ve280_p2_Simple_Twitter.dir/p2.cpp.s
+
+CMakeFiles/ve280_p2_Simple_Twitter.dir/simulation.cpp.o: CMakeFiles/ve280_p2_Simple_Twitter.dir/flags.make
+CMakeFiles/ve280_p2_Simple_Twitter.dir/simulation.cpp.o: ../simulation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyy/Ve280/project/ve280-p2-Simple-Twitter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ve280_p2_Simple_Twitter.dir/simulation.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ve280_p2_Simple_Twitter.dir/simulation.cpp.o -c /home/lyy/Ve280/project/ve280-p2-Simple-Twitter/simulation.cpp
+
+CMakeFiles/ve280_p2_Simple_Twitter.dir/simulation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ve280_p2_Simple_Twitter.dir/simulation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lyy/Ve280/project/ve280-p2-Simple-Twitter/simulation.cpp > CMakeFiles/ve280_p2_Simple_Twitter.dir/simulation.cpp.i
+
+CMakeFiles/ve280_p2_Simple_Twitter.dir/simulation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ve280_p2_Simple_Twitter.dir/simulation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lyy/Ve280/project/ve280-p2-Simple-Twitter/simulation.cpp -o CMakeFiles/ve280_p2_Simple_Twitter.dir/simulation.cpp.s
 
 # Object files for target ve280_p2_Simple_Twitter
 ve280_p2_Simple_Twitter_OBJECTS = \
-"CMakeFiles/ve280_p2_Simple_Twitter.dir/main.cpp.o"
+"CMakeFiles/ve280_p2_Simple_Twitter.dir/p2.cpp.o" \
+"CMakeFiles/ve280_p2_Simple_Twitter.dir/simulation.cpp.o"
 
 # External object files for target ve280_p2_Simple_Twitter
 ve280_p2_Simple_Twitter_EXTERNAL_OBJECTS =
 
-ve280_p2_Simple_Twitter: CMakeFiles/ve280_p2_Simple_Twitter.dir/main.cpp.o
+ve280_p2_Simple_Twitter: CMakeFiles/ve280_p2_Simple_Twitter.dir/p2.cpp.o
+ve280_p2_Simple_Twitter: CMakeFiles/ve280_p2_Simple_Twitter.dir/simulation.cpp.o
 ve280_p2_Simple_Twitter: CMakeFiles/ve280_p2_Simple_Twitter.dir/build.make
 ve280_p2_Simple_Twitter: CMakeFiles/ve280_p2_Simple_Twitter.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lyy/Ve280/project/ve280-p2-Simple-Twitter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ve280_p2_Simple_Twitter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lyy/Ve280/project/ve280-p2-Simple-Twitter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ve280_p2_Simple_Twitter"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ve280_p2_Simple_Twitter.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

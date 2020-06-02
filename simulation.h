@@ -1,7 +1,7 @@
 /*
  * This is VE280 Project 2, SU2020.
  * Written by Ziqiao Ma and Zhuoer Zhu.
- * Latest Update: 5/23/2020.
+ * Latest Update: 5/29/2020.
  * All rights reserved.
  */
 
@@ -25,9 +25,11 @@ void unpost(...);
 */
 
 /* Helper Functions */
+int searchname(string name, int total,const User_t user[]);
 
 // Printing
 void printUser(User_t& user, const string& relationship);
 void printPost(Post_t& post);
 void printTag(const Tag_t& tag, unsigned int rank);
+
 

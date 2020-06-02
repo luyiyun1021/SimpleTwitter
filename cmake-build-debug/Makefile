@@ -123,32 +123,59 @@ ve280_p2_Simple_Twitter/fast:
 	$(MAKE) -f CMakeFiles/ve280_p2_Simple_Twitter.dir/build.make CMakeFiles/ve280_p2_Simple_Twitter.dir/build
 .PHONY : ve280_p2_Simple_Twitter/fast
 
-main.o: main.cpp.o
+p2.o: p2.cpp.o
 
-.PHONY : main.o
+.PHONY : p2.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/ve280_p2_Simple_Twitter.dir/build.make CMakeFiles/ve280_p2_Simple_Twitter.dir/main.cpp.o
-.PHONY : main.cpp.o
+p2.cpp.o:
+	$(MAKE) -f CMakeFiles/ve280_p2_Simple_Twitter.dir/build.make CMakeFiles/ve280_p2_Simple_Twitter.dir/p2.cpp.o
+.PHONY : p2.cpp.o
 
-main.i: main.cpp.i
+p2.i: p2.cpp.i
 
-.PHONY : main.i
+.PHONY : p2.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/ve280_p2_Simple_Twitter.dir/build.make CMakeFiles/ve280_p2_Simple_Twitter.dir/main.cpp.i
-.PHONY : main.cpp.i
+p2.cpp.i:
+	$(MAKE) -f CMakeFiles/ve280_p2_Simple_Twitter.dir/build.make CMakeFiles/ve280_p2_Simple_Twitter.dir/p2.cpp.i
+.PHONY : p2.cpp.i
 
-main.s: main.cpp.s
+p2.s: p2.cpp.s
 
-.PHONY : main.s
+.PHONY : p2.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/ve280_p2_Simple_Twitter.dir/build.make CMakeFiles/ve280_p2_Simple_Twitter.dir/main.cpp.s
-.PHONY : main.cpp.s
+p2.cpp.s:
+	$(MAKE) -f CMakeFiles/ve280_p2_Simple_Twitter.dir/build.make CMakeFiles/ve280_p2_Simple_Twitter.dir/p2.cpp.s
+.PHONY : p2.cpp.s
+
+simulation.o: simulation.cpp.o
+
+.PHONY : simulation.o
+
+# target to build an object file
+simulation.cpp.o:
+	$(MAKE) -f CMakeFiles/ve280_p2_Simple_Twitter.dir/build.make CMakeFiles/ve280_p2_Simple_Twitter.dir/simulation.cpp.o
+.PHONY : simulation.cpp.o
+
+simulation.i: simulation.cpp.i
+
+.PHONY : simulation.i
+
+# target to preprocess a source file
+simulation.cpp.i:
+	$(MAKE) -f CMakeFiles/ve280_p2_Simple_Twitter.dir/build.make CMakeFiles/ve280_p2_Simple_Twitter.dir/simulation.cpp.i
+.PHONY : simulation.cpp.i
+
+simulation.s: simulation.cpp.s
+
+.PHONY : simulation.s
+
+# target to generate assembly for a file
+simulation.cpp.s:
+	$(MAKE) -f CMakeFiles/ve280_p2_Simple_Twitter.dir/build.make CMakeFiles/ve280_p2_Simple_Twitter.dir/simulation.cpp.s
+.PHONY : simulation.cpp.s
 
 # Help Target
 help:
@@ -159,9 +186,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ve280_p2_Simple_Twitter"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... p2.o"
+	@echo "... p2.i"
+	@echo "... p2.s"
+	@echo "... simulation.o"
+	@echo "... simulation.i"
+	@echo "... simulation.s"
 .PHONY : help
 
 

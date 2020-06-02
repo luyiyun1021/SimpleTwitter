@@ -74,12 +74,12 @@ clean: CMakeFiles/ve280_p2_Simple_Twitter.dir/clean
 CMakeFiles/ve280_p2_Simple_Twitter.dir/all:
 	$(MAKE) -f CMakeFiles/ve280_p2_Simple_Twitter.dir/build.make CMakeFiles/ve280_p2_Simple_Twitter.dir/depend
 	$(MAKE) -f CMakeFiles/ve280_p2_Simple_Twitter.dir/build.make CMakeFiles/ve280_p2_Simple_Twitter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyy/Ve280/project/ve280-p2-Simple-Twitter/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target ve280_p2_Simple_Twitter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyy/Ve280/project/ve280-p2-Simple-Twitter/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target ve280_p2_Simple_Twitter"
 .PHONY : CMakeFiles/ve280_p2_Simple_Twitter.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ve280_p2_Simple_Twitter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyy/Ve280/project/ve280-p2-Simple-Twitter/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyy/Ve280/project/ve280-p2-Simple-Twitter/cmake-build-debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ve280_p2_Simple_Twitter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyy/Ve280/project/ve280-p2-Simple-Twitter/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ve280_p2_Simple_Twitter.dir/rule

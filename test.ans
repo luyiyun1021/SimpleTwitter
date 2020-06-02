@@ -4,7 +4,7 @@
 3 VE492: 22
 >> visit
 marstin
-follow now
+stranger
 Followers: 3
 Following: 4
 >> follow
@@ -158,7 +158,8 @@ marstin: Ummm, good luck dude.
 3 VE492: 22
 >> unlike
 >> unlike
-Error: marstin has not liked post #1 of zhuzhuoer!
+Error: marstin cannot unlike post #1 of zhuzhuoer!
+marstin has not liked post #1 of zhuzhuoer.
 >> uncomment
 >> refresh
 zhuzhuoer
