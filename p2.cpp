@@ -1,12 +1,3 @@
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <iomanip>
-#include <string>
-#include <cstdlib>
-#include <cctype>
-#include <cassert>
-#include <algorithm>
 #include "simulation.h"
 
 int main(int argc,char *argv[]) {
@@ -66,7 +57,7 @@ int main(int argc,char *argv[]) {
     int n=0,l=0;
     for (int i=0;i<total_users;i++){
         for (int j=0;j<user[i].num_posts;j++){
-            for(int q=0;q<1000;q++){content[q]="0";}
+            for(int q=0;q<1000;q++){content[q]="";}
             path="./"+folder+"/"+user[i].username+"/posts/"+to_string(j+1);
             post.open(path);
             if (post) {
@@ -78,7 +69,7 @@ int main(int argc,char *argv[]) {
             n=1;
             user[i].posts[j].title=content[0];
             while(content[n].find_first_of("#")==0){
-                user[i].posts[j].tags[l]=content[n];
+                user[i].posts[j].tags[l]=content[n].substr(1,content[n].rfind("#")-1);
                 n++;l++;
             }
             user[i].posts[j].num_tags=l;
@@ -102,6 +93,37 @@ int main(int argc,char *argv[]) {
         }
     }
     //Server Initialization part has completed
-    cout<<user[0].posts[1].owner->follower[1]->username<<endl;
+    //Now read logfile
+    ifstream log;
+    string logname=argv[2];
+    for(int q=0;q<1000;q++){content[q]="";}
+    log.open(logname);
+    if (log) {
+        n=0;
+        while (getline(log, content[n])) {n++;}
+    }
+    log.close();
+    //cout<<content[5]<<endl;
+    //cout<<user[2].posts[0].text<<endl;
+    //printPost(user[0].posts[0]);
+    //string str="abc abc def";
+    //int c=(str.find("cab")==str.npos);
+    //visit(user[6],user[3]);
+    //refresh(user[3]);
+    //visit(user[searchname("zhuzhuoer",total_users,user)],user[searchname("marstin",total_users,user)]);
+    //follow(user[searchname("zhuzhuoer",total_users,user)],user[searchname("marstin",total_users,user)]);
+    //visit(user[searchname("zhuzhuoer",total_users,user)],user[searchname("marstin",total_users,user)]);
+    //unfollow(user[searchname("zhuzhuoer",total_users,user)],user[searchname("paul.weng",total_users,user)]);
+    //for (int pp=0;pp<user[0].num_followers;pp++){
+    //    cout<<user[0].follower[pp]->username<<endl;
+    //}
+    //visit(user[searchname("zhuzhuoer",total_users,user)],user[searchname("marstin",total_users,user)]);
+    //cout<<user[searchname("zhuzhuoer",total_users,user)].following[2]->username<<endl;
+    //refresh(user[3]);
+    //like(user[searchname("zhuzhuoer",total_users,user)],user[searchname("marstin",total_users,user)].posts[0]);
+    //refresh(user[3]);
+    unpost(user[0],2);
+    refresh(user[0]);
     return 0;
+
 }

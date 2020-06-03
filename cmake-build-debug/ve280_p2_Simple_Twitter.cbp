@@ -87,6 +87,9 @@
 		<Unit filename="/home/lyy/Ve280/project/ve280-p2-Simple-Twitter/p2.cpp">
 			<Option target="ve280_p2_Simple_Twitter"/>
 		</Unit>
+		<Unit filename="/home/lyy/Ve280/project/ve280-p2-Simple-Twitter/server_type.h">
+			<Option target="ve280_p2_Simple_Twitter"/>
+		</Unit>
 		<Unit filename="/home/lyy/Ve280/project/ve280-p2-Simple-Twitter/simulation.cpp">
 			<Option target="ve280_p2_Simple_Twitter"/>
 		</Unit>

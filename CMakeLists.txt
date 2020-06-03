@@ -3,4 +3,4 @@ project(ve280_p2_Simple_Twitter)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(ve280_p2_Simple_Twitter p2.cpp simulation.cpp simulation.h)
+add_executable(ve280_p2_Simple_Twitter p2.cpp simulation.cpp simulation.h server_type.h)
