@@ -50,6 +50,7 @@ void trending(int n,int total,const User_t user[]){
     }
     //sort the tags
     for (int i=0;i<m;i++){
+        flag=0;
         if(count==0){unique_tag[0]=tagname[0];count++;continue;}
         for(int j=0;j<i;j++){
             if(tagname[i]==tagname[j]){flag=1;}
@@ -123,14 +124,46 @@ void unfollow(User_t& user1,User_t& user2){
     user2.num_followers--;
 }
 
-void like(User_t& user1,Post_t& post){
+void like(User_t& user1,Post_t& post,int post_id){
     cout<<">> like"<<endl;
+    try{
+        for(int i=0;i<post.num_likes;i++){
+            if(user1.username==post.like_users[i]->username){
+                ostringstream oStream;
+                oStream << "Error: "<<user1.username<<" cannot like post #"<<post_id<<" of "<<post.owner->username<<"!" << endl;
+                oStream <<user1.username<<" has already liked post #"<<post_id<<" of "<<post.owner->username<<"." << endl;
+                throw Exception_t(INVALID_LOG, oStream.str());
+            }
+        }
+    }
+    catch (Exception_t &exception){
+        cout << exception.error_info;
+        return;
+    }
     post.num_likes++;
     post.like_users[post.num_likes-1]=&user1;
 }
 
-void unlike(User_t& user1,Post_t& post){
+void unlike(User_t& user1,Post_t& post,int post_id){
     cout<<">> unlike"<<endl;
+    try{
+        int flag=0;
+        for(int i=0;i<post.num_likes;i++){
+            if(user1.username==post.like_users[i]->username){
+                flag=1;
+            }
+        }
+        if (flag==0){
+            ostringstream oStream;
+            oStream << "Error: "<<user1.username<<" cannot unlike post #"<<post_id<<" of "<<post.owner->username<<"!" << endl;
+            oStream <<user1.username<<" has not liked post #"<<post_id<<" of "<<post.owner->username<<"." << endl;
+            throw Exception_t(INVALID_LOG, oStream.str());
+        }
+    }
+    catch (Exception_t &exception){
+        cout << exception.error_info;
+        return;
+    }
     int i,j;
     for (i=0;i<post.num_likes;i++){
         if (post.like_users[i]->username ==user1.username){break;}
@@ -148,8 +181,26 @@ void comment(User_t& user1,Post_t& post,string text){
     post.comments[post.num_comments-1].text=text;
 }
 
-void uncomment(User_t& user1,Post_t& post,int comment_id){
+void uncomment(User_t& user1,Post_t& post,int post_id, int comment_id){
     cout<<">> uncomment"<<endl;
+    try{
+        if(comment_id>post.num_comments){
+            ostringstream oStream;
+            oStream << "Error: "<<user1.username<<" cannot uncomment comment #"<<comment_id<<" of "<<"post #"<<post_id<<" posted by "<<post.owner->username<<"!" << endl;
+            oStream <<"Post #"<<post_id<<" does not have comment #"<<comment_id<<"." << endl;
+            throw Exception_t(INVALID_LOG, oStream.str());
+        }
+        if (user1.username!=post.comments[comment_id-1].user->username){
+            ostringstream oStream;
+            oStream << "Error: "<<user1.username<<" cannot uncomment comment #"<<comment_id<<" of "<<"post #"<<post_id<<" posted by "<<post.owner->username<<"!" << endl;
+            oStream <<user1.username<<" is not the owner of comment #"<<comment_id<<"." << endl;
+            throw Exception_t(INVALID_LOG, oStream.str());
+        }
+    }
+    catch (Exception_t &exception){
+        cout << exception.error_info;
+        return;
+    }
     int j;
     for (j=comment_id;j<post.num_comments;j++){
         post.comments[j-1]=post.comments[j];
@@ -192,13 +243,15 @@ int searchname(string name, int total,const User_t user[]){
 }
 
 bool compare(const Tag_t x,const Tag_t y){
-    int a=(int)x.tag_score;
-    int b=(int)y.tag_score;
-    if (a==b){return x.tag_content>y.tag_content;}
+    //EFFECT: compare function used in sort() to order the trending
+    int a=x.tag_score;
+    int b=y.tag_score;
+    if (a==b){return x.tag_content<y.tag_content;}
     return a>b;
 }
 
 bool a_is_following_b (User_t& user1,User_t& user2){
+    //EFFECT: return true if a is following b
     for(int i=0;i<user1.num_following;i++){
         if(user1.following[i]->username==user2.username){
             return true;
@@ -221,13 +274,13 @@ void printPost(Post_t& post){
     cout << post.title << endl;
     cout << post.text << endl;
     cout << "Tags: ";
-    for(unsigned int i = 0; i<post.num_tags; ++i){
+    for(int i = 0; i<post.num_tags; ++i){
         cout << post.tags[i] << " ";
     }
     cout << "\nLikes: " << post.num_likes << endl;
     if (post.num_comments > 0){
         cout << "Comments:" << endl;
-        for(unsigned int i = 0; i<post.num_comments; ++i){
+        for(int i = 0; i<post.num_comments; ++i){
             cout << post.comments[i].user->username << ": "
                  << post.comments[i].text << endl;
         }
@@ -236,6 +289,6 @@ void printPost(Post_t& post){
 }
 
 
-void printTag(const Tag_t& tag, unsigned int rank){
+void printTag(const Tag_t& tag, int rank){
     cout << rank << " " << tag.tag_content << ": " << tag.tag_score << endl;
 }

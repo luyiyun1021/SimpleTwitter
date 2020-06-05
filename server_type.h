@@ -15,25 +15,25 @@ using namespace std;
 
 /* Constants */
 // Max number of users in the server
-const unsigned int MAX_USERS = 20;
+const int MAX_USERS = 20;
 
 // Max number of followers per user
-const unsigned int MAX_FOLLOWERS = 20;
+const int MAX_FOLLOWERS = 20;
 
 // Max number of following per user
-const unsigned int MAX_FOLLOWING = 20;
+const int MAX_FOLLOWING = 20;
 
 // Max number of posts per user
-const unsigned int MAX_POSTS = 50;
+const int MAX_POSTS = 50;
 
 // Max number of likes per post
-const unsigned int MAX_LIKES = 20;
+const int MAX_LIKES = 20;
 
 // Max number of comments per post
-const unsigned int MAX_COMMENTS = 50;
+const int MAX_COMMENTS = 50;
 
 // Max number of tags per post
-const unsigned int MAX_TAGS = 5;
+const int MAX_TAGS = 5;
 
 
 /* Exception */
@@ -91,7 +91,7 @@ struct Tag_t
 */
 {
     string tag_content;
-    unsigned int tag_score;
+    int tag_score;
 };
 
 
@@ -117,9 +117,9 @@ struct Post_t
     User_t *owner;
     string title;
     string text;
-    unsigned int num_likes;
-    unsigned int num_comments;
-    unsigned int num_tags;
+    int num_likes;
+    int num_comments;
+    int num_tags;
 };
 
 
@@ -142,9 +142,9 @@ struct User_t
     User_t *following[MAX_FOLLOWING];
     User_t *follower[MAX_FOLLOWERS];
     string username;
-    unsigned int num_posts;
-    unsigned int num_following;
-    unsigned int num_followers;
+    int num_posts;
+    int num_following;
+    int num_followers;
 };
 
 
